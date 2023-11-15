@@ -10,7 +10,12 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action) => {
-            state.cart.push(action.payload)
+            const product: product = state.cart.filter((product) => product.id === action.payload.id)[0]
+            if (product) {
+                product.quantity = (product.quantity ?? 1) + 1
+            } else {
+                state.cart.push(action.payload)
+            }
         },
         increaseCartQuantity: (state, action) => {
             const product = state.cart.filter((product) => product.id === action.payload)[0];
