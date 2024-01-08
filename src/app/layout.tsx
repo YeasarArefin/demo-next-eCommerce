@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="Tn1neQL39CwIOeY5k_izCAP-apgG53JRx81IzU2K9HA" />
         <ColorSchemeScript />
       </head>
       <body className={mulish.className}>

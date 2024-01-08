@@ -2,7 +2,7 @@ import Products from "@/components/products/Products";
 import { product } from "@/types/types";
 
 const getProducts = async () => {
-  const res = await fetch('https://fakestoreapi.com/products', { next: { revalidate: 0 } })
+  const res = await fetch('https://fakestoreapi.com/products', { next: { revalidate: 10 } });
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
